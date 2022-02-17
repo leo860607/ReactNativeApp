@@ -23,7 +23,7 @@ const routes = [
             ios: 'ios-home',
             android: 'home',
         },
-        component: <HomePage />,
+        component: <DetailStack />,
     },
     {
         name: 'setting',
@@ -32,7 +32,7 @@ const routes = [
             ios: 'ios-settings',
             android: 'settings'
         },
-        component: <DetailStack />,
+        component: <SettingPage />,
     }
 ];
 

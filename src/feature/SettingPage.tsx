@@ -27,16 +27,14 @@ const SettingPage = () => {
     imgLink: "https://i.scdn.co/image/ab6761610000e5eb006ff3c0136a71bfb9928d34",
     likes: 0,
     isFavorite: true,
+    webUrl:"test",
   }
   const navigation = useNavigation()
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Image style={styles.logo} source={{ uri: news.imgLink }}></Image>
       <Text>Settings2!</Text>
-      <Button
-        title="go to detail"
-        onPress={() => navigation.navigate("detail" as never, {} as never)}
-      />
+
       {/* <Stack.Navigator>
         <Stack.Screen name="settings" component={SettingPage} />
         <Stack.Screen name="detail" component={DetailPage} />
