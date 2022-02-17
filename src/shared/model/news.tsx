@@ -4,4 +4,5 @@ export interface newsInfo{
     imgLink:string,
     likes:number,
     isFavorite:boolean,
+    webUrl:string,
 }
