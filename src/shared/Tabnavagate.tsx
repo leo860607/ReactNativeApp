@@ -7,6 +7,7 @@ import HomePage from "../feature/HomePage";
 import SettingPage from "../feature/SettingPage";
 import { Platform } from 'react-native';
 import DetailStack from "./DetailStack";
+import DataPage from "../feature/DataPage";
 
 
 
@@ -33,6 +34,15 @@ const routes = [
             android: 'settings'
         },
         component: <SettingPage />,
+    },
+    {
+        name: 'data',
+        id: 'data',
+        icon: {
+            ios: 'ios-bandage',
+            android: 'bandage'
+        },
+        component: <DataPage route={undefined}/>,
     }
 ];
 
