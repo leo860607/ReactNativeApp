@@ -43,7 +43,8 @@ const HomePage = () => {
     imgLink: "https://i.scdn.co/image/ab6761610000e5eb006ff3c0136a71bfb9928d34",
     likes: 0,
     isFavorite: true,
-    webUrl:"https://open.spotify.com/artist/3HqSLMAZ3g3d5poNaI7GOU"
+    webUrl:"http://10.0.2.2:5000/"
+    // "https://open.spotify.com/artist/3HqSLMAZ3g3d5poNaI7GOU"
   },
   {
     id: "2",
@@ -51,7 +52,8 @@ const HomePage = () => {
     imgLink: "https://i.discogs.com/T0yZ16BMznGeiyv4Q2eMgOoRlUmM_iRLBECCDXANPYU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWltYWdlcy9BLTIy/MjYzMDYtMTU5NzMz/MjM5Mi03MzMwLmpw/ZWc.jpeg",
     likes: 0,
     isFavorite: true,
-    webUrl:"https://www.marieclaire.com.tw/fashion/feature/57046/iu",
+    webUrl:"https://script.google.com/macros/s/AKfycbx2uNq0s6tCF1WfXMA2fFJf5fFQn1I6p9Ggmn3RHc0SEZ5P-MN99lzB2K23Tkh__sWWGA/exec",
+    // https://script.google.com/macros/s/AKfycbx2uNq0s6tCF1WfXMA2fFJf5fFQn1I6p9Ggmn3RHc0SEZ5P-MN99lzB2K23Tkh__sWWGA/exec
   }
   ]
   const navigation = useNavigation();
