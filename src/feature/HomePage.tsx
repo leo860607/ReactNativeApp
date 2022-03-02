@@ -4,6 +4,7 @@ import { Button, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, u
 import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions } from "react-native/Libraries/NewAppScreen";
 import { newsInfo } from "../shared/model/news";
 import firestore from "@react-native-firebase/firestore"
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 
@@ -79,6 +80,9 @@ const HomePage = () => {
     setValue(documentSnapshot.data()!.News)
   });
   unsubscribe();
+  allAnimeDocument.get().then((document) => {
+    setValue(document.data()!.News)
+  })
 
   return (
     <SafeAreaView>
@@ -91,10 +95,13 @@ const HomePage = () => {
             tmp ? tmp.map((element: any) => {
               const url = element.imgLink;
               return <View key={element.id} style={styles.card}>
-                <Image source={{ uri: url }}
-                  style={{ width: 300, height: 300 }}
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("detail" as never, element as never)}>
+                  <Image source={{ uri: url }}
+                    style={{ width: 300, height: 300 }}
 
-                ></Image>
+                  ></Image>
+                </TouchableOpacity>
                 <Button
                   title={element.title}
                   color="#f194ff"

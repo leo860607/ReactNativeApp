@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react";
 import { View, Text, Image, StyleSheet, Button } from "react-native";
 import localStorage from "../shared/service/localStorage";
 import firestore from "@react-native-firebase/firestore"
+import ImageDetail from "../shared/components/ImageDetail";
+import { ScrollView } from "react-native-gesture-handler";
 
 
 const styles = StyleSheet.create({
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
 });
 
 
-async function getFIreData(){
+async function getFIreData() {
     const animesCollection = firestore().collection('newsInfo')
     const allAnimeDocument = animesCollection.doc('AllNews')
     console.log("TT");
@@ -53,17 +55,22 @@ const DataPage = (routeParam: { route: any }) => {
 
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View style={{ width: 300, marginBottom: 10 }}>
-                <Button title="塞值" onPress={btnpress} />
-            </View>
-            <View style={{ width: 300, marginBottom: 10 }}>
-                <Button title="取值" onPress={getData} />
-                <Text>{tmp}</Text>
-            </View>
-            <View style={{ width: 300, marginBottom: 10 }}>
-                <Button title="取Fire值" onPress={getFIreData} />
-                <Text>{tmp}</Text>
-            </View>
+            <ScrollView>
+                <View style={{ width: 300, marginBottom: 10 }}>
+                    <ImageDetail title="test" imgUrl={require('../assets/IU.jpg')}></ImageDetail>
+                    <Button title="塞值" onPress={btnpress} />
+                </View>
+                <View style={{ width: 300, marginBottom: 10 }}>
+                    <ImageDetail title="two" imgUrl={require('../assets/IU.jpg')}></ImageDetail>
+                    <Button title="取值" onPress={getData} />
+                    <Text>{tmp}</Text>
+                </View>
+                <View style={{ width: 300, marginBottom: 10 }}>
+                    <ImageDetail title="three" imgUrl={require('../assets/IU.jpg')}></ImageDetail>
+                    <Button title="取Fire值" onPress={getFIreData} />
+                    <Text>{tmp}</Text>
+                </View>
+            </ScrollView>
         </View>
     );
 }
